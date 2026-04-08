@@ -7,20 +7,33 @@
 <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@2.2.0"></script>
 <style>
 :root {
-    /* Cores Producao (Claro) */
+    /* Cores Producao (Claro Mestre) */
     --rz:#00843D; --rzl:#00A84E; --rzd:#006830; --rzg:rgba(0,132,61,.12); --rzg2:rgba(0,132,61,.06);
     --bg:#f5f7f6; --s1:#fff; --s2:#f0f4f2; --bd:#e0e8e3; --tx:#1a2e22; --tx2:#5a7265;
     --red:#d63031; --redd:rgba(214,48,49,.1); --am:#e17055; --amd:rgba(225,112,85,.1);
     --bl:#0984e3; --cy:#00b894; --pr:#6c5ce7;
     --sh:0 1px 3px rgba(0,40,20,.06),0 1px 2px rgba(0,40,20,.04); --sh2:0 4px 12px rgba(0,40,20,.08);
     
-    /* Cores Perdas (Escuro) */
-    --p-bg: #0b0f14; --p-surface: #131920; --p-surface-2: #1a222b; --p-surface-3: #222c38;
-    --p-border: #2a3544; --p-text: #e8ecf1; --p-text-muted: #8494a7; --p-text-dim: #5a6b80;
-    --p-green: #22c55e; --p-green-bg: rgba(34,197,94,0.1); --p-green-border: rgba(34,197,94,0.25);
-    --p-red: #ef4444; --p-red-bg: rgba(239,68,68,0.1); --p-red-border: rgba(239,68,68,0.25);
-    --p-yellow: #eab308; --p-yellow-bg: rgba(234,179,8,0.1); --p-yellow-border: rgba(234,179,8,0.25);
-    --p-accent: #3b82f6; --p-accent-bg: rgba(59,130,246,0.1);
+    /* Cores Perdas (Agora mapeadas para o Claro Mestre) */
+    --p-bg: var(--bg); 
+    --p-surface: var(--s1); 
+    --p-surface-2: var(--s2); 
+    --p-surface-3: var(--bd);
+    --p-border: var(--bd); 
+    --p-text: var(--tx); 
+    --p-text-muted: var(--tx2); 
+    --p-text-dim: #78909c;
+    --p-green: var(--rz); 
+    --p-green-bg: var(--rzg); 
+    --p-green-border: rgba(0,132,61,0.25);
+    --p-red: var(--red); 
+    --p-red-bg: var(--redd); 
+    --p-red-border: rgba(214,48,49,0.25);
+    --p-yellow: var(--am); 
+    --p-yellow-bg: var(--amd); 
+    --p-yellow-border: rgba(225,112,85,0.25);
+    --p-accent: var(--bl); 
+    --p-accent-bg: rgba(9,132,227,0.1);
 }
 
 * {margin:0;padding:0;box-sizing:border-box}
@@ -75,12 +88,12 @@ body {font-family:'Plus Jakarta Sans',sans-serif; background:var(--bg); color:va
 .gap-diff {font-size:10px; font-family:'JetBrains Mono',monospace} .gap-diff.pos {color:var(--rz)} .gap-diff.neg {color:var(--red)}
 .section-title {font-size:16px; font-weight:800; margin:22px 0 14px; display:flex; align-items:center; gap:8px} .section-title .bar {width:4px; height:22px; border-radius:2px; background:var(--rz)}
 
-/* LAYOUT PERDAS (DARK THEME SCOPED) */
-.dark-theme-wrapper {
-    background: var(--p-bg); color: var(--p-text); border-radius: 14px; padding: 20px; box-shadow: var(--sh2);
+/* LAYOUT PERDAS (AGORA LIGHT THEME) */
+.perdas-wrapper {
+    background: transparent; color: var(--p-text); border-radius: 14px; padding: 0px; 
 }
 .p-header-top { display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:16px; margin-bottom: 24px; border-bottom: 1px solid var(--p-border); padding-bottom: 20px; }
-.p-header-top h1 { font-size:22px; font-weight:700; letter-spacing:-0.5px; color: #fff; }
+.p-header-top h1 { font-size:22px; font-weight:700; letter-spacing:-0.5px; color: var(--tx); }
 .p-header-top h1 span { color:var(--p-accent); }
 .p-header-sub { font-size:13px; color:var(--p-text-muted); margin-top:4px; font-weight:300; }
 .p-badge-meta { display:inline-flex; align-items:center; gap:6px; background:var(--p-surface-2); border:1px solid var(--p-border); border-radius:8px; padding:6px 14px; font-size:13px; font-family:'JetBrains Mono',monospace; }
@@ -91,10 +104,10 @@ body {font-family:'Plus Jakarta Sans',sans-serif; background:var(--bg); color:va
 .p-filter-btn:hover { border-color:var(--p-text-dim); color:var(--p-text); }
 .p-filter-btn.active { background:var(--p-accent-bg); border-color:var(--p-accent); color:var(--p-accent); }
 .p-filter-label { display:flex; align-items:center; font-size:12px; color:var(--p-text-dim); text-transform:uppercase; letter-spacing:1px; font-weight:700; margin-right:4px; }
-select.p-filter-btn { appearance: none; padding-right: 30px; background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%238494a7' fill='none' stroke-width='2' stroke-linecap='round'/%3E%3C/svg%3E"); background-repeat: no-repeat; background-position: right 10px center; }
+select.p-filter-btn { appearance: none; padding-right: 30px; background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%235a7265' fill='none' stroke-width='2' stroke-linecap='round'/%3E%3C/svg%3E"); background-repeat: no-repeat; background-position: right 10px center; }
 
 .p-kpi-row { display:grid; grid-template-columns:repeat(auto-fit, minmax(200px, 1fr)); gap:14px; margin-bottom:24px; }
-.p-kpi-card { background:var(--p-surface); border:1px solid var(--p-border); border-radius:10px; padding:18px 20px; position:relative; overflow:hidden; }
+.p-kpi-card { background:var(--p-surface); border:1px solid var(--p-border); border-radius:10px; padding:18px 20px; position:relative; overflow:hidden; box-shadow:var(--sh); }
 .p-kpi-card::before { content:''; position:absolute; top:0; left:0; right:0; height:3px; }
 .p-kpi-card.status-green::before { background:var(--p-green); } .p-kpi-card.status-red::before { background:var(--p-red); } .p-kpi-card.status-yellow::before { background:var(--p-yellow); }
 .p-kpi-label { font-size:11px; color:var(--p-text-dim); text-transform:uppercase; letter-spacing:1px; font-weight:700; }
@@ -103,17 +116,17 @@ select.p-filter-btn { appearance: none; padding-right: 30px; background-image: u
 .p-kpi-status { font-size:12px; margin-top:4px; }
 
 .p-grid-2 { display:grid; grid-template-columns:1fr 1fr; gap:16px; margin-bottom:24px; }
-.p-card { background:var(--p-surface); border:1px solid var(--p-border); border-radius:10px; overflow:hidden; margin-bottom: 24px; }
+.p-card { background:var(--p-surface); border:1px solid var(--p-border); border-radius:10px; overflow:hidden; margin-bottom: 24px; box-shadow:var(--sh); }
 .p-card-header { padding:14px 18px; border-bottom:1px solid var(--p-border); display:flex; align-items:center; justify-content:space-between; }
-.p-card-title { font-size:14px; font-weight:700; color: #fff; }
+.p-card-title { font-size:14px; font-weight:700; color: var(--tx); }
 .p-card-body { padding:16px 18px; }
 
 .p-table-wrap { overflow-x: auto; }
 .p-table { width:100%; border-collapse:collapse; }
-.p-table th { text-align:left; font-size:10px; text-transform:uppercase; letter-spacing:1px; color:var(--p-text-dim); padding:10px; border-bottom:1px solid var(--p-border); font-weight:700; white-space: nowrap; }
-.p-table td { padding:10px; border-bottom:1px solid rgba(42,53,68,0.5); font-size:13px; color: var(--p-text); white-space: nowrap; }
+.p-table th { text-align:left; font-size:10px; text-transform:uppercase; letter-spacing:1px; color:var(--p-text-dim); padding:10px; border-bottom:2px solid var(--p-border); font-weight:700; white-space: nowrap; }
+.p-table td { padding:10px; border-bottom:1px solid var(--p-surface-2); font-size:13px; color: var(--p-text); white-space: nowrap; }
 .p-table tr:last-child td { border-bottom:none; }
-.p-table tr:hover td { background:rgba(59,130,246,0.05); }
+.p-table tr:hover td { background:rgba(0,132,61,0.03); }
 
 .p-mono { font-family:'JetBrains Mono',monospace; font-size:12px; }
 .p-text-green { color:var(--p-green); } .p-text-red { color:var(--p-red); } .p-text-yellow { color:var(--p-yellow); } .p-text-muted { color:var(--p-text-muted); }
@@ -127,12 +140,12 @@ select.p-filter-btn { appearance: none; padding-right: 30px; background-image: u
 .p-bar-track { flex:1; height:6px; background:var(--p-surface-3); border-radius:3px; overflow:hidden; }
 .p-bar-fill { height:100%; border-radius:3px; transition:width .4s ease; }
 
-.p-chart-container { position:relative; height:260px; } /* Aumentei um pouco a altura pros rótulos */
+.p-chart-container { position:relative; height:260px; } 
 
 .p-breakdown-grid { display:grid; grid-template-columns:repeat(auto-fit, minmax(130px, 1fr)); gap:10px; }
 .p-breakdown-item { background:var(--p-surface-2); border-radius:8px; padding:12px 14px; border:1px solid var(--p-border); }
 .p-breakdown-label { font-size:10px; color:var(--p-text-dim); text-transform:uppercase; letter-spacing:0.5px; margin-bottom:4px; font-weight: 700; }
-.p-breakdown-value { font-family:'JetBrains Mono',monospace; font-size:18px; font-weight:700; color: #fff; }
+.p-breakdown-value { font-family:'JetBrains Mono',monospace; font-size:18px; font-weight:700; color: var(--tx); }
 .p-breakdown-bar { height:3px; border-radius:2px; margin-top:8px; background:var(--p-surface-3); overflow:hidden; }
 .p-breakdown-bar-fill { height:100%; border-radius:2px; background:var(--p-accent); }
 
@@ -169,11 +182,11 @@ select.p-filter-btn { appearance: none; padding-right: 30px; background-image: u
 </div>
 
 <div id="tab2" class="hidden">
-    <div class="dark-theme-wrapper">
+    <div class="perdas-wrapper">
         <div class="p-header-top">
           <div>
             <h1>Perdas de Colheita <span>— Qualidade</span></h1>
-            <div class="p-header-sub">Safra 25/26 · Atualizado em: 08/04/2026 18:20</div>
+            <div class="p-header-sub">Safra 25/26 · Atualizado em: 08/04/2026 18:35</div>
           </div>
           <div class="p-badge-meta"><span class="label">Meta:</span> <strong>3.50 kg</strong></div>
         </div>
@@ -273,7 +286,7 @@ function fmt(n,d){d=d||0;if(n==null||isNaN(n))return'\u2014';return n.toLocaleSt
 Chart.register(ChartDataLabels);
 
 // ==========================================
-// CONTROLE DE ABAS E TEMAS
+// CONTROLE DE ABAS (AGORA SEM MUDAR O FUNDO)
 // ==========================================
 function switchTab(t){
     activeTab = t;
@@ -282,20 +295,12 @@ function switchTab(t){
     document.getElementById('tab1').classList.toggle('hidden',t!==1);
     document.getElementById('tab2').classList.toggle('hidden',t!==2);
     
-    // Mágica do Dark Mode 
     if(t === 2) {
-        document.body.style.background = '#0b0f14';
-        document.getElementById('master-hdr').style.background = '#111820';
-        document.getElementById('master-tabs').style.background = '#131920';
-        
         if(DATA_P) {
             if(!perdasRendered) { initPerdas(); perdasRendered = true; }
             else renderPerdasAll();
         }
     } else {
-        document.body.style.background = 'var(--bg)';
-        document.getElementById('master-hdr').style.background = 'var(--rz)';
-        document.getElementById('master-tabs').style.background = 'var(--s1)';
         renderProd();
     }
 }
@@ -456,7 +461,7 @@ function renderDT(){
 
 
 // ==========================================
-// LÓGICA PERDAS (Aba 2 - DARK MODE)
+// LÓGICA PERDAS (Aba 2 - AGORA LIGHT THEME)
 // ==========================================
 function getStatusP(val) { if (val > META_P) return 'red'; if (val >= META_P - TOL_P) return 'yellow'; return 'green'; }
 function getStatusLabelP(val) { const s = getStatusP(val); if (s === 'red') return '⚠️ Acima'; if (s === 'yellow') return '🟡 Atenção'; return '✅ Dentro'; }
@@ -497,7 +502,7 @@ function getFilteredRawP() {
 
 function initPerdas() {
     if(!DATA_P || !DATA_P.raw) {
-        document.getElementById('tab2').innerHTML = '<div style="padding:40px;text-align:center;color:#8494a7">Aba Base colheita não encontrada no Excel.</div>';
+        document.getElementById('tab2').innerHTML = '<div style="padding:40px;text-align:center;color:var(--p-text-muted)">Aba Base colheita não encontrada no Excel.</div>';
         return;
     }
     
@@ -566,7 +571,7 @@ function renderPerdasAll() {
     const filteredRaw = getFilteredRawP();
     
     if(filteredRaw.length === 0) {
-        document.getElementById('p-kpiRow').innerHTML = '<div style="color:#8494a7; padding: 20px 0;">Nenhum dado encontrado para este filtro.</div>';
+        document.getElementById('p-kpiRow').innerHTML = '<div style="color:var(--p-text-muted); padding: 20px 0;">Nenhum dado encontrado para este filtro de Frente/Semana/Fazenda.</div>';
         document.getElementById('p-breakdownGrid').innerHTML = '';
         document.getElementById('p-rankingBody').innerHTML = '';
         document.getElementById('p-detailBody').innerHTML = '';
@@ -607,7 +612,7 @@ function renderPerdasAll() {
     }).join('');
 
     // 3. Charts
-    Chart.defaults.color='#8494a7'; Chart.defaults.font.family='DM Sans';
+    Chart.defaults.color='#5a7265'; Chart.defaults.font.family='Plus Jakarta Sans';
     
     const fData = groupByP(filteredRaw, ['frente']).sort((a,b)=>b.media-a.media);
     chartFrenteInst = makeBarChartP('chartFrente', fData.map(r => 'Frente ' + r.frente), fData.map(r => r.media), chartFrenteInst);
@@ -638,8 +643,8 @@ function makeBarChartP(canvasId, labels, values, existingChart) {
       labels,
       datasets: [{
         data: values,
-        backgroundColor: values.map(v => { const s = getStatusP(v); return s === 'red' ? 'rgba(239,68,68,0.7)' : s === 'yellow' ? 'rgba(234,179,8,0.7)' : 'rgba(34,197,94,0.7)'; }),
-        borderColor: values.map(v => { const s = getStatusP(v); return s === 'red' ? '#ef4444' : s === 'yellow' ? '#eab308' : '#22c55e'; }),
+        backgroundColor: values.map(v => { const s = getStatusP(v); return s === 'red' ? 'rgba(214,48,49,0.7)' : s === 'yellow' ? 'rgba(225,112,85,0.7)' : 'rgba(0,132,61,0.7)'; }),
+        borderColor: values.map(v => { const s = getStatusP(v); return s === 'red' ? '#d63031' : s === 'yellow' ? '#e17055' : '#00843D'; }),
         borderWidth: 1, borderRadius: 4,
       }]
     },
@@ -649,10 +654,10 @@ function makeBarChartP(canvasId, labels, values, existingChart) {
       plugins: { 
           legend: { display: false }, 
           
-          // RÓTULOS ESTILIZADOS PARA O DARK MODE
+          // RÓTULOS (AGORA EM TOM ESCURO PARA O LIGHT THEME)
           datalabels: {
               display: true,
-              color: '#e8ecf1', 
+              color: '#1a2e22', 
               backgroundColor: 'transparent',
               anchor: 'end',
               align: 'top',
@@ -661,16 +666,16 @@ function makeBarChartP(canvasId, labels, values, existingChart) {
           }
       },
       scales: {
-        y: { beginAtZero: true, grid: { color: 'rgba(42,53,68,0.5)' }, ticks: { color: '#8494a7', font: { family: 'JetBrains Mono', size: 11 } } },
-        x: { grid: { display: false }, ticks: { color: '#8494a7' } }
+        y: { beginAtZero: true, grid: { color: '#e8ede9' }, ticks: { color: '#5a7265', font: { family: 'JetBrains Mono', size: 11 } } },
+        x: { grid: { display: false }, ticks: { color: '#5a7265' } }
       }
     },
     plugins: [{
       afterDraw(chart) {
         const ctx2 = chart.ctx; const y = chart.scales.y.getPixelForValue(META_P); const xR = chart.scales.x.right;
-        ctx2.save(); ctx2.strokeStyle = '#ef4444'; ctx2.lineWidth = 1.5; ctx2.setLineDash([6, 4]);
+        ctx2.save(); ctx2.strokeStyle = '#d63031'; ctx2.lineWidth = 1.5; ctx2.setLineDash([6, 4]);
         ctx2.beginPath(); ctx2.moveTo(chart.scales.x.left, y); ctx2.lineTo(xR, y); ctx2.stroke();
-        ctx2.fillStyle = '#ef4444'; ctx2.font = '10px JetBrains Mono';
+        ctx2.fillStyle = '#d63031'; ctx2.font = '10px JetBrains Mono';
         ctx2.fillText('META ' + fmt(META_P,2), xR - 60, y - 5); ctx2.restore();
       }
     }]
