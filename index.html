@@ -67,7 +67,6 @@ tr:hover td{background:#F1F8E9}
 .saldo-kpi .kpi{flex:1 1 180px}
 @media(max-width:600px){.tab{padding:11px 14px;font-size:12px}.kpi-vl{font-size:17px}}
 </style></head><body>
-<div id="root">
 <div class="tabs">
   <div class="tab ativo" onclick="aba('dash',this)">Dashboard</div>
   <div class="tab" onclick="aba('faz',this)">Controle por Fazenda</div>
@@ -90,7 +89,7 @@ tr:hover td{background:#F1F8E9}
   <button class="btn btn-az" onclick="aplicar()">Aplicar</button>
   <button class="btn btn-ci" onclick="verTudo()">Ver tudo</button>
   <span class="info" id="inf"></span>
-  <span class="info">Gerado 11/04/2026 00:14</span>
+  <span class="info">Gerado 11/04/2026 00:28</span>
 </div>
 <div class="kpis">
   <div class="kpi az"><div class="kpi-lb">Meta</div><div class="kpi-vl" id="kM">-</div></div>
@@ -115,7 +114,7 @@ tr:hover td{background:#F1F8E9}
 <div class="rodape">Painel de Acompanhamento | Safra 25/26</div>
 </div></div>
 <div class="pg" id="pg-faz">
-<div class="hdr">Controle por Fazenda | Fazenda > Zona > Talhao</div>
+<div class="hdr">Controle por Fazenda | Fazenda &gt; Zona &gt; Talhao</div>
 <div class="wrap">
 <div class="busca"><input type="text" id="busca" placeholder="Buscar fazenda..." oninput="filtrarFaz()"></div>
 <div class="nlctrl">
@@ -127,7 +126,7 @@ tr:hover td{background:#F1F8E9}
 <div style="overflow-x:auto"><table id="tD">
 <tr><th class="ec"></th><th>Fazenda / Zona / Talhao</th><th>Area (ha)</th><th>Variedades</th><th>Zonas/Talh.</th><th>Status</th></tr>
 </table></div>
-<div class="rodape">Gerado em 11/04/2026 00:14</div>
+<div class="rodape">Gerado em 11/04/2026 00:28</div>
 </div></div>
 <div class="pg" id="pg-ins">
 <div class="hdr">Status de Insumos por Talhão</div>
@@ -136,7 +135,7 @@ tr:hover td{background:#F1F8E9}
 <div class="card-full" style="padding:0;max-height:70vh;overflow-y:auto;border:1px solid #ced4da">
   <table id="tIns"><tr><td>Carregando dados de insumos...</td></tr></table>
 </div>
-<div class="rodape">Gerado em 11/04/2026 00:14</div>
+<div class="rodape">Gerado em 11/04/2026 00:28</div>
 </div></div>
 <div class="pg" id="pg-saldo">
 <div class="hdr">Saldo de Insumos — Requisições e Movimentações</div>
@@ -146,7 +145,7 @@ tr:hover td{background:#F1F8E9}
 <div class="card-full" style="padding:0;max-height:70vh;overflow-y:auto;border:1px solid #ced4da">
   <table id="tSaldo"><tr><td>Carregando saldo de insumos...</td></tr></table>
 </div>
-<div class="rodape">Gerado em 11/04/2026 00:14</div>
+<div class="rodape">Gerado em 11/04/2026 00:28</div>
 </div></div>
 <script type="application/json" id="data-reg">[{"d":"2026-04-06","a":2.63,"v":"RB075322","f":"FAZENDA NOVA NIAGARA","c":19817,"z":440,"t":4,"ci":"Inverno"},{"d":"2026-04-07","a":6.0,"v":"RB075322","f":"FAZENDA NOVA NIAGARA","c":19817,"z":440,"t":4,"ci":"Inverno"},{"d":"2026-04-07","a":7.0,"v":"CTC9003","f":"FAZENDA NOVA NIAGARA","c":19817,"z":440,"t":16,"ci":"Inverno"},{"d":"2026-04-01","a":4.7,"v":"CTC9003","f":"FAZENDA NOVA NIAGARA","c":19817,"z":441,"t":7,"ci":"Inverno"},{"d":"2026-04-06","a":19.3,"v":"CTC9003","f":"FAZENDA NOVA NIAGARA","c":19817,"z":441,"t":7,"ci":"Inverno"},{"d":"2026-04-01","a":8.72,"v":"CTC9003","f":"FAZENDA NOVA NIAGARA","c":19817,"z":441,"t":8,"ci":"Inverno"},{"d":"2026-04-06","a":1.58,"v":"CTC9003","f":"FAZENDA NOVA NIAGARA","c":19817,"z":441,"t":9,"ci":"Inverno"},{"d":"2026-04-01","a":20.87,"v":"CTC9003","f":"FAZENDA NOVA NIAGARA","c":19817,"z":441,"t":10,"ci":"Inverno"},{"d":"2026-04-01","a":3.86,"v":"CTC9003","f":"FAZENDA NOVA NIAGARA","c":19817,"z":441,"t":11,"ci":"Inverno"},{"d":"2026-04-06","a":17.13,"v":"CTC9003","f":"FAZENDA NOVA NIAGARA","c":19817,"z":441,"t":11,"ci":"Inverno"},{"d":"2026-04-06","a":1.0,"v":"CTC9003","f":"FAZENDA NOVA NIAGARA","c":19817,"z":441,"t":18,"ci":"Inverno"},{"d":"2026-04-06","a":1.0,"v":"CTC9003","f":"FAZENDA NOVA NIAGARA","c":19817,"z":441,"t":19,"ci":"Inverno"},{"d":"2026-04-06","a":1.49,"v":"CTC9003","f":"FAZENDA NOVA NIAGARA","c":19817,"z":441,"t":34,"ci":"Inverno"},{"d":"2026-04-01","a":8.0,"v":"CTC9003","f":"FAZENDA NOVA NIAGARA","c":19817,"z":441,"t":35,"ci":"Inverno"},{"d":"2026-04-06","a":3.31,"v":"CTC9003","f":"FAZENDA NOVA NIAGARA","c":19817,"z":441,"t":35,"ci":"Inverno"},{"d":"2026-04-06","a":71.54,"v":"RB075322","f":"Pedra branca","c":74720,"z":311,"t":1,"ci":"Inverno"}]</script>
 <script type="application/json" id="data-hier">{"74532":{"n":"FAZ ESTANCIA BONANZA","z":{}},"74720":{"n":"FAZ PEDRA BRANCA","z":{"311":{"1":{"a":71.54,"v":["RB075322"],"d":"2026-04-06"}}}},"19489":{"n":"FAZ. SAO SEBASTIAO DO PARDO","z":{}},"19629":{"n":"FAZENDA BARREIRINHO - GLEBA A","z":{}},"9138":{"n":"FAZENDA BELA VISTA","z":{}},"9171":{"n":"FAZENDA CACHOEIRA","z":{}},"57569":{"n":"FAZENDA ENCONTRO DAS AGUAS","z":{}},"19315":{"n":"FAZENDA GUARITA","z":{}},"19627":{"n":"FAZENDA LARANJAL","z":{}},"19817":{"n":"FAZENDA NOVA NIAGARA","z":{"440":{"4":{"a":8.629999999999999,"v":["RB075322"],"d":"2026-04-06"},"16":{"a":7.0,"v":["CTC9003"],"d":"2026-04-07"}},"441":{"7":{"a":24.0,"v":["CTC9003"],"d":"2026-04-01"},"8":{"a":8.72,"v":["CTC9003"],"d":"2026-04-01"},"9":{"a":1.58,"v":["CTC9003"],"d":"2026-04-06"},"10":{"a":20.87,"v":["CTC9003"],"d":"2026-04-01"},"11":{"a":20.99,"v":["CTC9003"],"d":"2026-04-01"},"18":{"a":1.0,"v":["CTC9003"],"d":"2026-04-06"},"19":{"a":1.0,"v":["CTC9003"],"d":"2026-04-06"},"34":{"a":1.49,"v":["CTC9003"],"d":"2026-04-06"},"35":{"a":11.31,"v":["CTC9003"],"d":"2026-04-01"}}}},"9001":{"n":"FAZENDA SANTA HELENA","z":{}},"19729":{"n":"FAZENDA SANTA MADALENA","z":{}},"9532":{"n":"FAZENDA SANTA MARIA","z":{}},"9003":{"n":"FAZENDA SANTA ROSA","z":{}},"9182":{"n":"FAZENDA SANTA TEREZINHA","z":{}},"19645":{"n":"FAZENDA SAO JOAO DO CRESCIUMAL","z":{}},"9146":{"n":"FAZENDA SAO JOSE","z":{}},"9188":{"n":"FAZENDA SAO PEDRO","z":{}},"19309":{"n":"FAZENDA SAO PEDRO","z":{}},"19679":{"n":"FAZENDA SAO SEBASTIAO","z":{}},"9187":{"n":"FAZENDA SÃO PEDRO","z":{}},"9189":{"n":"FAZENDA SÃO PEDRO","z":{}},"19625":{"n":"FAZENDA TRIUNFO I II E III","z":{}},"19825":{"n":"SITIO ALTO DA SERRA","z":{}},"84569":{"n":"SITIO CAMPOS ELISEOS","z":{}},"19823":{"n":"SITIO SANTANA II","z":{}},"76469":{"n":"SITIO SAO BENEDITO II","z":{}},"96569":{"n":"SITIO SAO JOSE","z":{}},"29111":{"n":"ST NOVA ESPERANCA","z":{}}}</script>
@@ -171,71 +170,118 @@ function aba(id,el){
 function fmt(n,d){
   if(isNaN(n)||n===null)return"0";
   d=d===undefined?2:d;
-  var s=Math.abs(n).toFixed(d),p=s.split("."),ii=p[0],r="",c=0;
-  for(var j=ii.length-1;j>=0;j--){if(c>0&&c%3===0)r="."+r;r=ii[j]+r;c++;}
+  var s=Math.abs(n).toFixed(d),p=s.split("."),i=p[0],r="",c=0;
+  for(var j=i.length-1;j>=0;j--){if(c>0&&c%3===0)r="."+r;r=i[j]+r;c++;}
   return(n<0?"-":"")+r+(d>0?","+p[1]:"");
 }
 function inArr(a,v){for(var i=0;i<a.length;i++)if(a[i]===v)return true;return false;}
 function up(el,tag){while(el){if(el.tagName&&el.tagName.toUpperCase()===tag.toUpperCase())return el;el=el.parentElement;}return null;}
 
-function renderGraficoMetas(dadosCompletos){
-  if(typeof Chart==='undefined')return;
-  var ctx=document.getElementById('graficoMetas').getContext('2d');
-  if(chartMetas)chartMetas.destroy();
-  var labels=[],rData=[],mrData=[],mcData=[],nData=[];
-  for(var i=0;i<dadosCompletos.length;i++){
-    var m=dadosCompletos[i];
-    if(!m.dia||m.dia==='nan')continue;
-    var dtParts=m.d.split("-");
-    labels.push([dtParts[2]+"/"+dtParts[1],m.sem]);
-    rData.push(m.r!==null&&m.r>0?m.r:null);
-    mrData.push(m.mr!==null?m.mr:null);
-    mcData.push(m.mc!==null?m.mc:null);
-    nData.push(m.n!==null?m.n:null);
+function renderGraficoMetas(dadosCompletos) {
+  if (typeof Chart === 'undefined') return;
+  var ctx = document.getElementById('graficoMetas').getContext('2d');
+  if (chartMetas) chartMetas.destroy();
+
+  var labels=[], rData=[], mrData=[], mcData=[], nData=[];
+  
+  for (var i=0; i<dadosCompletos.length; i++) {
+    var m = dadosCompletos[i];
+    if (!m.dia || m.dia==='nan') continue;
+    
+    // Eixo X: dia/mês + dia da semana
+    var dtParts = m.d.split("-");
+    labels.push([dtParts[2]+"/"+dtParts[1], m.sem]);
+    
+    rData.push(m.r!==null && m.r>0 ? m.r : null);
+    mrData.push(m.mr!==null ? m.mr : null);
+    mcData.push(m.mc!==null ? m.mc : null);
+    nData.push(m.n!==null ? m.n : null);
   }
-  function getLast(arr){for(var j=arr.length-1;j>=0;j--){if(arr[j]!==null&&arr[j]!==undefined&&arr[j]!==0)return j;}return -1;}
+  
+  function getLastValidIndex(arr) {
+    for (var j=arr.length-1; j>=0; j--) {
+      if (arr[j]!==null && arr[j]!==undefined && arr[j]!==0) return j;
+    }
+    return -1;
+  }
+
   Chart.register(ChartDataLabels);
-  chartMetas=new Chart(ctx,{
-    type:'bar',
-    data:{labels:labels,datasets:[
-      {label:'Realizado (ha)',data:rData,backgroundColor:'#43A047',order:4,maxBarThickness:40,
-       datalabels:{anchor:'end',align:'top',color:'#1B5E20',font:{weight:'bold',size:10},
-         display:function(ctx){return ctx.dataset.data[ctx.dataIndex]!==null&&ctx.dataset.data[ctx.dataIndex]>0;}}},
-      {label:'Meta Real',data:mrData,type:'line',borderColor:'#1565C0',backgroundColor:'#1565C0',
-       borderWidth:2,pointRadius:0,fill:false,order:3,spanGaps:true,
-       datalabels:{anchor:'end',align:'right',color:'#1565C0',font:{weight:'bold',size:11},
-         display:function(ctx){return ctx.dataIndex===getLast(ctx.dataset.data);}}},
-      {label:'Nova Meta',data:nData,type:'line',borderColor:'#d32f2f',backgroundColor:'#d32f2f',
-       borderWidth:2,borderDash:[5,5],pointRadius:0,fill:false,order:2,spanGaps:true,
-       datalabels:{anchor:'end',align:'right',color:'#d32f2f',font:{weight:'bold',size:11},
-         display:function(ctx){return ctx.dataIndex===getLast(ctx.dataset.data);}}},
-      {label:'Meta Corrigida',data:mcData,type:'line',borderColor:'#FBC02D',backgroundColor:'#FBC02D',
-       borderWidth:2,pointRadius:0,fill:false,order:1,spanGaps:true,
-       datalabels:{anchor:'end',align:'right',color:'#F57F17',font:{weight:'bold',size:11},
-         display:function(ctx){return ctx.dataIndex===getLast(ctx.dataset.data);}}}
-    ]},
-    options:{responsive:true,maintainAspectRatio:false,layout:{padding:{top:25,right:45}},
-      scales:{y:{beginAtZero:true,grid:{color:'#e0e0e0'}},x:{grid:{display:false},ticks:{font:{size:10}}}},
-      plugins:{legend:{position:'bottom',labels:{usePointStyle:true,boxWidth:8}},
-        datalabels:{formatter:function(v){if(!v)return'';return fmt(v,2);}}}}
+  chartMetas = new Chart(ctx, {
+    type: 'bar',
+    data: {
+      labels: labels,
+      datasets: [
+        { 
+          label: 'Realizado (ha)', data: rData, backgroundColor: '#43A047', order: 4, maxBarThickness: 40,
+          datalabels: { 
+            anchor:'end', align:'top', color:'#1B5E20', font:{weight:'bold',size:10},
+            display: function(ctx) { return ctx.dataset.data[ctx.dataIndex]!==null && ctx.dataset.data[ctx.dataIndex]>0; }
+          } 
+        },
+        { 
+          label: 'Meta Real', data: mrData, type:'line', borderColor:'#1565C0', backgroundColor:'#1565C0',
+          borderWidth:2, pointRadius:0, fill:false, order:3, spanGaps:true,
+          datalabels: { 
+            anchor:'end', align:'right', color:'#1565C0', font:{weight:'bold',size:11},
+            display: function(ctx) { return ctx.dataIndex===getLastValidIndex(ctx.dataset.data); }
+          } 
+        },
+        { 
+          label: 'Nova Meta', data: nData, type:'line', borderColor:'#d32f2f', backgroundColor:'#d32f2f',
+          borderWidth:2, borderDash:[5,5], pointRadius:0, fill:false, order:2, spanGaps:true,
+          datalabels: { 
+            anchor:'end', align:'right', color:'#d32f2f', font:{weight:'bold',size:11},
+            display: function(ctx) { return ctx.dataIndex===getLastValidIndex(ctx.dataset.data); }
+          } 
+        },
+        { 
+          label: 'Meta Corrigida', data: mcData, type:'line', borderColor:'#FBC02D', backgroundColor:'#FBC02D',
+          borderWidth:2, pointRadius:0, fill:false, order:1, spanGaps:true,
+          datalabels: { 
+            anchor:'end', align:'right', color:'#F57F17', font:{weight:'bold',size:11},
+            display: function(ctx) { return ctx.dataIndex===getLastValidIndex(ctx.dataset.data); }
+          } 
+        }
+      ]
+    },
+    options: {
+      responsive:true, maintainAspectRatio:false, layout:{padding:{top:25,right:45}}, 
+      scales: { 
+        y:{beginAtZero:true,grid:{color:'#e0e0e0'}}, 
+        x:{grid:{display:false},ticks:{font:{size:10}}} 
+      },
+      plugins: {
+        legend:{position:'bottom',labels:{usePointStyle:true,boxWidth:8}},
+        datalabels:{formatter:function(v){if(!v)return'';return fmt(v,2);}}
+      }
+    }
   });
 }
 
-function renderTabelaMetas(dados){
+// TABELA DETALHADA DE META DIÁRIA
+function renderTabelaMetas(dados) {
   var h="<tr><th>Data</th><th>Dia</th><th>Dia Sem.</th><th class='num'>Realizado</th><th class='num'>Meta Real</th><th class='num'>Meta Corrigida</th><th class='num'>Nova Meta</th><th class='num'>Desvio</th></tr>";
-  for(var i=0;i<dados.length;i++){
+  for (var i=0; i<dados.length; i++) {
     var m=dados[i];
-    if(!m.dia||m.dia==='nan')continue;
+    if (!m.dia || m.dia==='nan') continue;
     var dtParts=m.d.split("-");
     var dataFmt=dtParts[2]+"/"+dtParts[1]+"/"+dtParts[0];
+    var realizado=m.r!==null?fmt(m.r,2):"-";
+    var metaReal=m.mr!==null?fmt(m.mr,2):"-";
+    var metaCorr=m.mc!==null?fmt(m.mc,2):"-";
+    var novaMeta=m.n!==null?fmt(m.n,2):"-";
+    var desvio=m.dm!==null?fmt(m.dm,2):"-";
+    
     var cls="";
-    if(m.r!==null&&m.r>0&&m.mr!==null){cls=m.r>=m.mr?"style='background:#E8F5E9'":"style='background:#FFF3E0'";}
-    h+="<tr "+cls+"><td>"+dataFmt+"</td><td>"+m.dia+"</td><td>"+m.sem+"</td>";
-    h+="<td class='num'>"+(m.r!==null?fmt(m.r,2):"-")+"</td>";
-    h+="<td class='num'>"+(m.mr!==null?fmt(m.mr,2):"-")+"</td>";
-    h+="<td class='num'>"+(m.mc!==null?fmt(m.mc,2):"-")+"</td>";
-    h+="<td class='num'>"+(m.n!==null?fmt(m.n,2):"-")+"</td>";
-    h+="<td class='num'>"+(m.dm!==null?fmt(m.dm,2):"-")+"</td></tr>";
+    if(m.r!==null && m.r>0 && m.mr!==null) {
+      cls = m.r >= m.mr ? "style='background:#E8F5E9'" : "style='background:#FFF3E0'";
+    }
+    
+    h+="<tr "+cls+">";
+    h+="<td>"+dataFmt+"</td><td>"+m.dia+"</td><td>"+m.sem+"</td>";
+    h+="<td class='num'>"+realizado+"</td><td class='num'>"+metaReal+"</td>";
+    h+="<td class='num'>"+metaCorr+"</td><td class='num'>"+novaMeta+"</td>";
+    h+="<td class='num'>"+desvio+"</td></tr>";
   }
   document.getElementById("tMetaDia").innerHTML=h;
 }
@@ -244,7 +290,7 @@ function aplicar(){
   var di=document.getElementById("dtI").value;
   var df=document.getElementById("dtF").value;
   var ci=document.getElementById("selC").value;
-  if(!REG)return;
+  if(!REG) return;
   if(!di||!df){alert("Preencha as duas datas.");return;}
   if(di>df){alert("Data inicio maior que data fim.");return;}
   var dados=[],p18=0,p12=0,piv=0;
@@ -266,18 +312,22 @@ function aplicar(){
   document.getElementById("k18").textContent=fmt(p18,1)+" ha";
   document.getElementById("k12").textContent=fmt(p12,1)+" ha";
   rMeses(dados,pl);rVars(dados,pl);rCiclos(dados);
+  
   var divErro=document.getElementById("erroMetas");
   var divCanvas=document.getElementById("containerMetas");
   if(ERRO_METAS){
     divErro.style.display="block";
     divErro.innerHTML="<b>Erro:</b> "+ERRO_METAS;
     divCanvas.style.display="none";
-  }else if(METAS&&METAS.length>0){
+  } else if(METAS&&METAS.length>0){
     divErro.style.display="none";divCanvas.style.display="block";
-    var mf=[];
-    for(var i=0;i<METAS.length;i++){if(METAS[i].d>=di&&METAS[i].d<=df)mf.push(METAS[i]);}
-    renderGraficoMetas(mf.length>0?mf:METAS);
-    renderTabelaMetas(mf.length>0?mf:METAS);
+    // Filtrar metas pelo período selecionado
+    var metasFiltradas=[];
+    for(var i=0;i<METAS.length;i++){
+      if(METAS[i].d>=di&&METAS[i].d<=df) metasFiltradas.push(METAS[i]);
+    }
+    renderGraficoMetas(metasFiltradas.length>0?metasFiltradas:METAS);
+    renderTabelaMetas(metasFiltradas.length>0?metasFiltradas:METAS);
   }
 }
 
@@ -301,7 +351,6 @@ function rMeses(dados,pl){
   }
   document.getElementById("tM").innerHTML=h;
 }
-
 function rVars(dados,pl){
   var v={},vk=[];
   for(var i=0;i<dados.length;i++){var k=dados[i].v;if(!v[k]){v[k]=0;vk.push(k);}v[k]+=dados[i].a;}
@@ -311,15 +360,11 @@ function rVars(dados,pl){
   for(var i=0;i<lim;i++){
     var k=vk[i],a=v[k],pct=pl>0?a/pl*100:0,iv=(k==="VIVEIRO");
     var larg=Math.min(pct,100).toFixed(0),cor=iv?"#F9A825":"#43A047";
-    h+="<tr"+(iv?" class='viv'":"")+">"+"<td>"+k+(iv?" !":"")+"</td><td class='num'>"+fmt(a)+"
-
-    var larg=Math.min(pct,100).toFixed(0),cor=iv?"#F9A825":"#43A047";
-    h+="<tr"+(iv?" class='viv'":"")+">"+"<td>"+k+(iv?" !":"")+"</td><td class='num'>"+fmt(a)+"</td>";
+    h+="<tr"+(iv?" class='viv'":"")+"><td>"+k+(iv?" !":"")+"</td><td class='num'>"+fmt(a)+"</td>";
     h+="<td><div class='bw'><div class='bb' style='width:"+larg+"%;background:"+cor+"'></div></div> "+fmt(pct,1)+"%</td></tr>";
   }
   document.getElementById("tV").innerHTML=h;
 }
-
 function rCiclos(dados){
   var tot={};
   for(var i=0;i<dados.length;i++){if(!tot[dados[i].ci])tot[dados[i].ci]=0;tot[dados[i].ci]+=dados[i].a;}
@@ -377,7 +422,6 @@ function renderFaz(){
   document.getElementById("tD").innerHTML=
     "<tr><th class='ec'></th><th>Fazenda / Zona / Talhao</th><th>Area (ha)</th><th>Variedades</th><th>Zonas/Talh.</th><th>Status</th></tr>"+h;
 }
-
 function filtrarFaz(){
   var q=document.getElementById("busca").value.toLowerCase().trim();
   var rows=document.getElementById("tD").getElementsByTagName("tr");
@@ -389,7 +433,6 @@ function filtrarFaz(){
     else{rows[i].style.display=nm.indexOf(q)>-1?"":"none";}
   }
 }
-
 function tog(btn){
   var tr=up(btn,"tr");if(!tr)return;
   var nv=parseInt(tr.getAttribute("data-nivel"));
@@ -403,39 +446,24 @@ function tog(btn){
     if(!found)continue;
     var n=parseInt(rows[i].getAttribute("data-nivel"));
     if(isNaN(n)||n<=nv)break;
-    if(isExp){
-      rows[i].style.display="none";
-      var b=rows[i].getElementsByTagName("button")[0];
-      if(b){b.setAttribute("data-exp","0");b.innerHTML="&#9654;";}
-    }else if(n===nv+1){
-      rows[i].style.display="";
-    }
+    if(isExp){rows[i].style.display="none";var b=rows[i].getElementsByTagName("button")[0];if(b){b.setAttribute("data-exp","0");b.innerHTML="&#9654;";}}
+    else if(n===nv+1){rows[i].style.display="";}
   }
 }
-
 function nivel(nv){
   var ids=["b0","b1","b2"];
-  for(var i=0;i<ids.length;i++){
-    var el=document.getElementById(ids[i]);
-    if(el)el.className=i===nv?"ativo":"";
-  }
+  for(var i=0;i<ids.length;i++){var el=document.getElementById(ids[i]);if(el)el.className=i===nv?"ativo":"";}
   var rows=document.getElementById("tD").getElementsByTagName("tr");
   for(var i=0;i<rows.length;i++){
     var n=parseInt(rows[i].getAttribute("data-nivel"));if(isNaN(n))continue;
     rows[i].style.display=n<=nv?"":"none";
     var btn=rows[i].getElementsByTagName("button")[0];
-    if(btn){
-      if(n<nv){btn.setAttribute("data-exp","1");btn.innerHTML="&#9660;";}
-      else{btn.setAttribute("data-exp","0");btn.innerHTML="&#9654;";}
-    }
+    if(btn){if(n<nv){btn.setAttribute("data-exp","1");btn.innerHTML="&#9660;";}else{btn.setAttribute("data-exp","0");btn.innerHTML="&#9654;";}}
   }
 }
 
 function renderInsumos(){
-  if(!INSUMOS||INSUMOS.length===0){
-    document.getElementById("tIns").innerHTML="<tr><td style='padding:20px;text-align:center'>Nenhuma informação de insumos.</td></tr>";
-    return;
-  }
+  if(!INSUMOS||INSUMOS.length===0){document.getElementById("tIns").innerHTML="<tr><td style='padding:20px;text-align:center'>Nenhuma informação de insumos.</td></tr>";return;}
   var q=document.getElementById("buscaIns").value.toLowerCase().trim();
   var cols=Object.keys(INSUMOS[0]);
   var h="<thead><tr>";
@@ -443,11 +471,7 @@ function renderInsumos(){
   h+="</tr></thead><tbody>";
   for(var r=0;r<INSUMOS.length;r++){
     var row=INSUMOS[r],match=!q;
-    if(q){
-      for(var i=0;i<cols.length;i++){
-        if(String(row[cols[i]]).toLowerCase().indexOf(q)>-1){match=true;break;}
-      }
-    }
+    if(q){for(var i=0;i<cols.length;i++){if(String(row[cols[i]]).toLowerCase().indexOf(q)>-1){match=true;break;}}}
     if(!match)continue;
     h+="<tr>";
     for(var i=0;i<cols.length;i++){
@@ -465,21 +489,33 @@ function renderInsumos(){
   document.getElementById("tIns").innerHTML=h;
 }
 
+// ══════════════ SALDO INSUMOS ══════════════
 function renderSaldo(){
   if(!SALDO||SALDO.length===0){
     document.getElementById("tSaldo").innerHTML="<tr><td style='padding:20px;text-align:center'>Nenhum dado de saldo de insumo.</td></tr>";
     document.getElementById("saldoKpis").innerHTML="";
     return;
   }
-  var totReq=0,totUti=0,totDev=0,totSaldo=0,nItens=0;
+  
+  // KPIs: total requisitado, utilizado, devolvido, saldo
+  var totReq=0, totUti=0, totDev=0, totSaldo=0, nItens=0;
+  var porInsumo = {};
   for(var i=0;i<SALDO.length;i++){
     var s=SALDO[i];
-    totReq+=parseFloat(s["Qtde Requisitada"])||0;
-    totUti+=parseFloat(s["Qtde Utilizada"])||0;
-    totDev+=parseFloat(s["Qtde Devolvida"])||0;
-    totSaldo+=parseFloat(s["Saldo"])||0;
-    nItens++;
+    var req=parseFloat(s["Qtde Requisitada"])||0;
+    var uti=parseFloat(s["Qtde Utilizada"])||0;
+    var dev=parseFloat(s["Qtde Devolvida"])||0;
+    var sal=parseFloat(s["Saldo"])||0;
+    totReq+=req; totUti+=uti; totDev+=dev; totSaldo+=sal; nItens++;
+    var nome=String(s["Apoio"]||"").trim();
+    if(nome){
+      if(!porInsumo[nome])porInsumo[nome]={req:0,uti:0,sal:0};
+      porInsumo[nome].req+=req;
+      porInsumo[nome].uti+=uti;
+      porInsumo[nome].sal+=sal;
+    }
   }
+  
   var kh="";
   kh+="<div class='kpi'><div class='kpi-lb'>Total Requisitado</div><div class='kpi-vl'>"+fmt(totReq,1)+"</div></div>";
   kh+="<div class='kpi az'><div class='kpi-lb'>Total Utilizado</div><div class='kpi-vl'>"+fmt(totUti,1)+"</div></div>";
@@ -487,7 +523,8 @@ function renderSaldo(){
   kh+="<div class='kpi ro'><div class='kpi-lb'>Saldo Disponível</div><div class='kpi-vl'>"+fmt(totSaldo,1)+"</div></div>";
   kh+="<div class='kpi am'><div class='kpi-lb'>Linhas</div><div class='kpi-vl'>"+nItens+"</div></div>";
   document.getElementById("saldoKpis").innerHTML=kh;
-
+  
+  // Tabela
   var q=document.getElementById("buscaSaldo").value.toLowerCase().trim();
   var cols=Object.keys(SALDO[0]);
   var h="<thead><tr>";
@@ -495,29 +532,21 @@ function renderSaldo(){
   h+="</tr></thead><tbody>";
   for(var r=0;r<SALDO.length;r++){
     var row=SALDO[r],match=!q;
-    if(q){
-      for(var i=0;i<cols.length;i++){
-        if(String(row[cols[i]]).toLowerCase().indexOf(q)>-1){match=true;break;}
-      }
-    }
+    if(q){for(var i=0;i<cols.length;i++){if(String(row[cols[i]]).toLowerCase().indexOf(q)>-1){match=true;break;}}}
     if(!match)continue;
     h+="<tr>";
     for(var i=0;i<cols.length;i++){
       var val=row[cols[i]],sv=String(val).trim();
       var cls="";
+      // Colorir saldo
       if(cols[i]==="Saldo"){
         var sn=parseFloat(sv);
-        if(!isNaN(sn)){
-          cls=sn>0?" class='saldo-pos'":" class='saldo-zero'";
-          val=fmt(sn,1);
-        }
-      }else if(typeof val==='number'&&!Number.isInteger(val)){
+        if(!isNaN(sn)){cls=sn>0?" class='saldo-pos'":" class='saldo-zero'";val=fmt(sn,1);}
+      } else if(typeof val==='number'&&!Number.isInteger(val)){
         val=fmt(val,2);
       }
-      if(cols[i]==="Data"&&sv.length===10){
-        var dp=sv.split("-");
-        val=dp[2]+"/"+dp[1]+"/"+dp[0];
-      }
+      // Formatar data
+      if(cols[i]==="Data"&&sv.length===10){var dp=sv.split("-");val=dp[2]+"/"+dp[1]+"/"+dp[0];}
       h+="<td"+cls+">"+val+"</td>";
     }
     h+="</tr>";
@@ -526,8 +555,8 @@ function renderSaldo(){
   document.getElementById("tSaldo").innerHTML=h;
 }
 
-window.addEventListener('DOMContentLoaded',function(){
-  try{
+window.addEventListener('DOMContentLoaded', function() {
+  try {
     REG=JSON.parse(document.getElementById('data-reg').textContent||'[]');
     HIER=JSON.parse(document.getElementById('data-hier').textContent||'{}');
     METAS=JSON.parse(document.getElementById('data-metas').textContent||'[]');
@@ -538,10 +567,10 @@ window.addEventListener('DOMContentLoaded',function(){
     nivel(0);
     renderInsumos();
     renderSaldo();
-  }catch(e){
+  } catch(e) {
     var d=document.getElementById("kM");if(d)d.textContent="Erro: "+e.message;
     console.error(e);
   }
 });
 
-</script></div><!--/root></body></html>
+</script></body></html>
